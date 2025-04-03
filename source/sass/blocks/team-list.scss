@@ -1,0 +1,50 @@
+.team-list {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+.team-list__item {
+  display: none;
+  line-height: 1.6;
+  text-align: center;
+  flex-direction: column;
+  gap: 24px;
+
+  &--current {
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.team-list__photo {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+    height: 320px;
+  }
+}
+
+.team-list__name {
+  font-size: 16px;
+  color: $green;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+  }
+}
+
+.team-list__position {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}

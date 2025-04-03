@@ -1,0 +1,61 @@
+.contacts {
+  padding-top: 45px;
+}
+
+.contacts__location {
+  position: relative;
+}
+
+.contacts__title {
+  position: relative;
+  padding-top: 25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 79px;
+    background: url("../img/icons/flag.svg") no-repeat;
+    background-size: contain;
+  }
+}
+
+.contacts__contacts-list {
+  margin-bottom: 30px;
+}
+
+.contacts__map {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 374px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 502px;
+  }
+}
+
+.contacts__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  max-height: 362px;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    min-height: 374px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 502px;
+  }
+}

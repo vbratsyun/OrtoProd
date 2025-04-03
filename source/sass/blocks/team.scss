@@ -1,0 +1,9 @@
+.team__container {
+  position: relative;
+  max-width: 863px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1030px;
+  }
+}

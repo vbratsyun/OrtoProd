@@ -1,0 +1,16 @@
+.wrapper {
+  margin: 0 20px;
+
+  @media (min-width: $mobile-width-only) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1030px;
+    margin: 0 auto 0;
+  }
+}

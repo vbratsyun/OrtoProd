@@ -1,0 +1,33 @@
+.page-header-contacts-list {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+.page-header-contacts-list__item {
+  @media (min-width: $desktop-width) {
+    max-width: 185px;
+  }
+}
+
+.page-header-contacts-list__title {
+  font-size: 13px;
+  margin: 0;
+  color: $grey-text;
+}
+
+.page-header-contacts-list__address {
+  font-style: normal;
+}
+
+.page-header-contacts-list__text {
+  font-size: 14px;
+  line-height: normal;
+  color: $green;
+  // font-weight: 700;
+  margin: 0;
+}

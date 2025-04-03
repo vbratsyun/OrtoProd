@@ -1,0 +1,36 @@
+.pagination-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.pagination-arrows__prew,
+.pagination-arrows__next {
+  display: block;
+}
+
+.pagination-arrows__prew {
+  padding: 10px 10px 10px 0;
+}
+
+.pagination-arrows__next {
+  padding: 10px 0 10px 10px;
+}
+
+
+.pagination-arrows__prew:hover .pagination-arrows__icon,
+.pagination-arrows__next:hover .pagination-arrows__icon {
+  fill: $hover;
+}
+
+.pagination-arrows__prew:active .pagination-arrows__icon,
+.pagination-arrows__next:active .pagination-arrows__icon {
+  fill: $active;
+}

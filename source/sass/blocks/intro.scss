@@ -1,0 +1,135 @@
+.intro {
+  position: relative;
+  text-align: right;
+  padding: 35px 0 30px;
+  // background: url("../img/index/intro-background.png") no-repeat;
+  // background-size: cover;
+  // background-position-x: 80%;
+  background-color: $grey-background;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 104px;
+    left: 0;
+    width: 100%;
+    height: 338px;
+    background: url("../img/index/intro-background.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 0 40px;
+
+    &::after {
+      height: 560px;
+      bottom: 0;
+      background-size: cover;
+      background-position-y: 34%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 0 40px;
+    // min-height: 683px;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.intro__slogan {
+  max-width: 500px;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 25px;
+  color: #242b0a;
+  font-weight: 700;
+  line-height: 38px;
+  margin: 0 0 20px auto;
+  text-shadow: 1px 1px 20px $white;
+
+  @media (min-width: $tablet-width) {
+    max-width: 1048px;
+    font-size: 52px;
+    line-height: 60px;
+    margin: 0 0 40px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    max-width: 641px;
+    font-size: 57px;
+    line-height: 70px;
+    margin: 0 0 45px auto;
+
+    &::after {
+      content: "";
+    position: absolute;
+      width: 364px;
+      height: 650px;
+      top: -60px;
+      left: -389px;
+      background: url("../img/index/intro-background.png") no-repeat;
+      background-size: 174%;
+      background-position-x: 15%;
+    }
+  }
+}
+
+.intro__text {
+  width: 100%;
+  max-width: 400px;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 13.5px;
+  color: $black;
+  text-transform: uppercase;
+  margin: 0 0 394px auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 447px;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0 0 55px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 560px;
+    font-size: 22px;
+    margin: 0 0 76px auto;
+  }
+}
+
+.intro__link {
+  display: block;
+  max-width: 292px;
+  font-family: "Arial", "Calibri", "Helvetica", sans-serif;
+  text-align: center;
+  color: $white;
+  background-color: $green;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  margin: 0 auto;
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &:active {
+    background-color: $active;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 26px;
+    font-size: 19.5px;
+    margin: 0 0 567px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 33px auto;
+  }
+}

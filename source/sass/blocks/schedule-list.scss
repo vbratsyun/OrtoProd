@@ -1,0 +1,11 @@
+.schedule-list__item {
+  font-size: 14px;
+  line-height: normal;
+  color: $green;
+  // font-weight: 700;
+
+  &--contacts {
+    font-weight: 400;
+    color: $main-color;
+  }
+}

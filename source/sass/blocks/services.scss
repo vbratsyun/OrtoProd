@@ -1,0 +1,26 @@
+.services__title {
+  margin: 0 auto 10px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 20px;
+  }
+}
+
+.services__description {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 17px;
+  color: $grey-text;
+  text-transform: uppercase;
+  margin: 0 auto 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 36px;
+    margin: 0 0 50px;
+    width: 91%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1030px;
+  }
+}

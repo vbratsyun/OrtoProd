@@ -1,0 +1,86 @@
+.about-us__slogan {
+  position: relative;
+  max-width: 280px;
+  font-size: 20px;
+  font-weight: 700;
+  color: $green;
+  text-align: center;
+  margin: 0 auto 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+  }
+
+  &::before {
+    background: url("../img/icons/icon-quote-left.svg") no-repeat;
+    background-size: contain;
+    left: -7px;
+  }
+
+  &::after {
+    background: url("../img/icons/icon-quote-right.svg") no-repeat;
+    background-size: contain;
+    right: -7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    max-width: 300px;
+
+    &::before,
+    &::after {
+      width: 25px;
+      height: 25px;
+    }
+
+    &::before {
+      left: -26px;
+    }
+
+    &::after {
+      right: -26px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 40px;
+  }
+}
+
+.about-us__description {
+  text-align: center;
+  color: $title-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+    max-width: 88%;
+    margin: 0 auto 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1030px;
+  }
+}
+
+.about-us__advantages-list {
+  margin-bottom: 30px;
+}
+
+.about-us__container {
+  padding: 43px 20px 22px;
+  background-color: $grey-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 43px 40px 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 63px 40px 42px;
+  }
+}

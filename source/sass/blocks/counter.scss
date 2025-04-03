@@ -1,0 +1,46 @@
+.counter {
+  padding: 22px 0 43px;
+  background-color: $grey-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 42px 0 63px;
+  }
+}
+
+.counter__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    max-width: 863px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1030px;
+    margin: 0 auto 30px;
+  }
+}
+
+.counter__completed-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+  }
+}
+
+.counter__number {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: $green;
+}

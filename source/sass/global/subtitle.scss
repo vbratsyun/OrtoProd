@@ -1,0 +1,12 @@
+.subtitle {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 18px;
+  color: #3b3714;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: 660px) {
+    font-size: 24px;
+  }
+}

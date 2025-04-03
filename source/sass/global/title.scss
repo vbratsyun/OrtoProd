@@ -1,0 +1,12 @@
+.title {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 36px;
+  color: #3b3714;
+  line-height: normal;
+  margin: 0 auto 50px;
+  letter-spacing: 1px;
+
+  @media (min-width: 660px) {
+    font-size: 46px;
+  }
+}

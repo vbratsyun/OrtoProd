@@ -1,0 +1,41 @@
+.products {
+  padding: 22px 0 0;
+  // background-color: $grey-background;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.products-list__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.products__link {
+  display: block;
+  max-width: 292px;
+  font-family: "Arial", "Calibri", "Helvetica", sans-serif;
+  text-align: center;
+  color: $white;
+  background-color: $green;
+  border: 0;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &:active {
+    background-color: $active;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 18px 26px;
+    font-size: 19.5px;
+  }
+}

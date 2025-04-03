@@ -1,0 +1,29 @@
+.br {
+  display: none;
+
+  &--mobile {
+    display: block;
+  }
+
+  @media (min-width: 660px) {
+    &--mobile,
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--mobile,
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+}
