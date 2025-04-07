@@ -1,10 +1,8 @@
+// Для квадратной картинки
 .intro {
   position: relative;
   text-align: right;
   padding: 35px 0 30px;
-  // background: url("../img/index/intro-background.png") no-repeat;
-  // background-size: cover;
-  // background-position-x: 80%;
   background-color: $grey-background;
 
   &::after {
@@ -32,7 +30,6 @@
 
   @media (min-width: $desktop-width) {
     padding: 60px 0 40px;
-    // min-height: 683px;
 
     &::after {
       content: none;
@@ -133,3 +130,100 @@
     margin: 0 0 33px auto;
   }
 }
+
+// Для широкоформатной картинки
+// .intro {
+//   text-align: right;
+//   padding: 46px 0 30px;
+//   background: url(../img/index/intro-background4.jpg) no-repeat;
+//   background-size: cover;
+//   background-position-x: 80%;
+//   background-color: $white;
+
+//   @media (min-width: $tablet-width) {
+//     padding: 66px 0 40px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     padding: 66px 0 40px;
+//     min-height: 683px;
+//   }
+// }
+
+// .intro__slogan {
+//   max-width: 432px;
+//   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+//   font-size: 25px;
+//   color: #242b0a;
+//   font-weight: 700;
+//   line-height: 38px;
+//   margin: 0 0 20px auto;
+//   text-shadow: 1px 1px 20px $white;
+
+//   @media (min-width: $tablet-width) {
+//     max-width: 915px;
+//     font-size: 52px;
+//     line-height: 60px;
+//     margin: 0 0 100px auto;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     font-size: 60px;
+//     line-height: 80px;
+//     margin: 0 0 135px auto;
+//   }
+// }
+
+// .intro__text {
+//   max-width: 280px;
+//   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+//   font-size: 13.5px;
+//   color: $black;
+//   text-transform: uppercase;
+//   margin: 0 0 219px auto;
+
+//   @media (min-width: $tablet-width) {
+//     max-width: 426px;
+//     font-size: 18px;
+//     line-height: 36px;
+//     margin: 0 0 255px auto;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     max-width: 521px;
+//     font-size: 22px;
+//   }
+// }
+
+// .intro__link {
+//   display: block;
+//   max-width: 292px;
+//   font-family: "Arial", "Calibri", "Helvetica", sans-serif;
+//   text-align: center;
+//   color: $white;
+//   background-color: $green;
+//   text-transform: uppercase;
+//   padding: 9px 16px;
+//   margin: 0 auto;
+//   border: 0;
+//   cursor: pointer;
+//   box-sizing: border-box;
+
+//   &:hover {
+//     background-color: $hover;
+//   }
+
+//   &:active {
+//     background-color: $active;
+//   }
+
+//   @media (min-width: $tablet-width) {
+//     padding: 18px 26px;
+//     font-size: 19.5px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     padding: 18px 26px;
+//     font-size: 19.5px;
+//   }
+// }
