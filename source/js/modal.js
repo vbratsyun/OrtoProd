@@ -1,71 +1,84 @@
-// Получаем элементы
-const images = document.querySelectorAll(".products-list__item img");
+const images = document.querySelectorAll(".products-list__item picture");
 const modal = document.getElementById("modal");
 const modalImage = document.getElementById("modal-image");
 const closeBtn = document.getElementById("close");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
-// Индекс текущего изображения
 let currentIndex = 0;
 
-// Скрываем попап сразу через CSS при загрузке страницы
 document.addEventListener("DOMContentLoaded", () => {
   modal.style.display = "none";
   document.body.style.overflow = "";
 });
 
-// Функция для открытия модального окна с изображением
-images.forEach((image, index) => {
-  image.addEventListener("click", () => {
-    modal.style.display = "flex"; // Показываем модальное окно
-    modalImage.src = image.src; // Устанавливаем источник изображения
-    modalImage.alt = image.alt; // Устанавливаем описание изображения
-    currentIndex = index; // Устанавливаем индекс текущего изображения
+function getResponsiveImageSrc(pictureElement) {
+  const sources = pictureElement.querySelectorAll("source");
+  const img = pictureElement.querySelector("img");
+  const viewportWidth = window.innerWidth;
 
-    // Блокируем прокрутку страницы
+  // Выбираем source по media
+  let selectedSrc = img.src; // fallback
+
+  sources.forEach((source) => {
+    const media = source.media;
+    if (window.matchMedia(media).matches) {
+      const srcset = source.getAttribute("srcset").split(",")[0].trim();
+      selectedSrc = srcset;
+    }
+  });
+
+  return {
+    src: selectedSrc,
+    alt: img.alt,
+  };
+}
+
+images.forEach((picture, index) => {
+  const img = picture.querySelector("img");
+
+  img.addEventListener("click", () => {
+    const { src, alt } = getResponsiveImageSrc(picture);
+    modalImage.src = src;
+    modalImage.alt = alt;
+    currentIndex = index;
+    modal.style.display = "flex";
     document.body.style.overflow = "hidden";
   });
 });
 
-// Функция закрытия модального окна
 function closeModal() {
   modal.style.display = "none";
-  document.body.style.overflow = ""; // Восстанавливаем прокрутку страницы
+  document.body.style.overflow = "";
 }
 
-// Закрытие модального окна при клике на крестик
 closeBtn.addEventListener("click", closeModal);
 
-// Закрытие модального окна при клике за пределами изображения
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     closeModal();
   }
 });
 
-// Закрытие модального окна при нажатии клавиши Escape
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
   }
 });
 
-// Функция для обновления изображения в модальном окне
 function updateImage(index) {
-  const image = images[index];
-  modalImage.src = image.src;
-  modalImage.alt = image.alt;
+  const picture = images[index];
+  const { src, alt } = getResponsiveImageSrc(picture);
+  modalImage.src = src;
+  modalImage.alt = alt;
   currentIndex = index;
 }
 
-// Кнопка "предыдущее"
 prevBtn.addEventListener("click", () => {
   currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
   updateImage(currentIndex);
 });
 
-// Кнопка "следующее"
 nextBtn.addEventListener("click", () => {
   currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
   updateImage(currentIndex);
