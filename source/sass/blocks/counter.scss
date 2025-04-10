@@ -5,6 +5,16 @@
   @media (min-width: $tablet-width) {
     padding: 42px 0 63px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 0 83px;
+  }
+}
+
+.counter__title {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
 }
 
 .counter__container {
@@ -23,7 +33,7 @@
 
   @media (min-width: $desktop-width) {
     max-width: 1030px;
-    margin: 0 auto 30px;
+    margin: 0 auto 40px;
   }
 }
 
