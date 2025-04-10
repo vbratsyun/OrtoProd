@@ -51,7 +51,8 @@
 }
 
 .intro__slogan {
-  max-width: 500px;
+  // max-width: 500px;
+  max-width: 280px;
   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
   font-size: 25px;
   color: #242b0a;
@@ -60,11 +61,19 @@
   margin: 0 0 20px auto;
   text-shadow: 1px 1px 20px $white;
 
+  @media (min-width: 431px) {
+    max-width: 500px;
+  }
+
   @media (min-width: $tablet-width) {
-    max-width: 1048px;
+    max-width: 580px;
     font-size: 52px;
     line-height: 60px;
     margin: 0 0 40px auto;
+  }
+
+  @media (min-width: 821px) {
+    max-width: 905px;
   }
 
   @media (min-width: $desktop-width) {
