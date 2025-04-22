@@ -1,0 +1,40 @@
+.breadcrumbs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.breadcrumbs-list__item:first-child {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    margin: auto;
+    width: 15px;
+    height: 1px;
+    background-color: $grey-text;
+  }
+}
+
+.breadcrumbs-list__link {
+  font-size: 12px;
+  color: $grey-text;
+  padding: 5px 8px;
+  letter-spacing: -0.2px;
+
+  &--current {
+    color: $green;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 5px 10.8px;
+  }
+}

@@ -54,3 +54,9 @@
   font-size: 36px;
   color: $green;
 }
+
+.counter__description {
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
+}

@@ -1,6 +1,11 @@
 .wrapper {
   margin: 0 20px;
 
+  &--breadcrumbs-list {
+    position: relative;
+    left: -8px;
+  }
+
   @media (min-width: $mobile-width-only) {
     margin: 0 40px;
   }
@@ -12,5 +17,9 @@
   @media (min-width: $desktop-width) {
     max-width: 1030px;
     margin: 0 auto 0;
+
+    &--breadcrumbs-list {
+      left: 0;
+    }
   }
 }

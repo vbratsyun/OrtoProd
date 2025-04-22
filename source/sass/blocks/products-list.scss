@@ -22,6 +22,7 @@
 
 .products-list__image {
   object-fit: cover;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 130px;

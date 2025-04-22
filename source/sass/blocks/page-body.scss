@@ -4,6 +4,10 @@
   min-height: 100%;
   color: $main-color;
   background-color: $white;
+
+  &--products {
+    background-color: rgba($color: $grey-background, $alpha: 0.4);
+  }
 }
 
 .page-body__page-header {
@@ -19,8 +23,8 @@
     z-index: 2;
     bottom: 545px;
     right: 2px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: 2px solid $hover;
     background-color: transparent;
@@ -33,7 +37,50 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
     bottom: 690px;
     right: 10px;
+  }
+}
+
+.page-body__footnote-container {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  line-height: normal;
+  color: $grey-text;
+  padding-top: 10px;
+  padding-bottom: 45px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $grey-line;
+  }
+}
+
+.page-body__footnote-sign {
+  color: $green;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-body__footnote-text {
+  width: 88%;
+  letter-spacing: -0.2px;
+
+  @media (min-width: 361px) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
   }
 }

@@ -1,0 +1,237 @@
+.leg-prosthesis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.leg-prosthesis-list__item {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+
+  &:first-of-type {
+    display: flex;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 0.35fr 1fr;
+    gap: 20px;
+
+    &:first-of-type {
+      display: grid;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.leg-prosthesis-list__container {
+  display: flex;
+  justify-content: space-between;
+
+  &--image {
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--image {
+      grid-column: 1/2;
+      grid-row: 1/4;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: start;
+      align-items: center;
+    }
+
+    &--price {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--image {
+      flex-direction: row;
+      align-items: start;
+      justify-content: space-around;
+    }
+  }
+}
+
+.leg-prosthesis-list__wrapper {
+  min-height: 173px;
+
+  @media (min-width: 441px) {
+    min-height: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+
+    &--title {
+      grid-row: 1/2;
+    }
+
+    &--constructive {
+      grid-row: 2/3;
+    }
+  }
+}
+
+.leg-prosthesis-list__image {
+  object-fit: cover;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    height: 193px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 423px;
+  }
+}
+
+.leg-prosthesis-list__title {
+  font-size: 21px;
+
+  &--swimming {
+    width: 98%;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.leg-prosthesis-list__text {
+  color: $grey-text;
+  margin-bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+  }
+}
+
+.leg-prosthesis-list__fieldset {
+  border-bottom: 1px solid $grey-line;
+}
+
+.leg-prosthesis-list__button {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 52px;
+  width: 100%;
+  text-align: left;
+  color: $title-text;
+  padding: 10px 0;
+  border: 0;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.leg-prosthesis-list__value {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: $title-text;
+  }
+
+  &::before {
+    width: 13px;
+    height: 1px;
+  }
+
+  &::after {
+    width: 1px;
+    height: 13px;
+    right: 6px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+  }
+}
+
+.leg-prosthesis-list__description {
+  display: none;
+  font-size: 12px;
+  color: $grey-text;
+  margin: 0 0 10px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+.leg-prosthesis-list__price {
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+  }
+}
+
+.leg-prosthesis-list__price-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: $title-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.leg-prosthesis-list__button:hover {
+  color: $hover;
+}
+
+.leg-prosthesis-list__button:hover .leg-prosthesis-list__value {
+  &::before,
+  &::after {
+    background-color: $hover;
+  }
+}
+
+.leg-prosthesis-list__button:active {
+  color: $active;
+}
+
+.leg-prosthesis-list__button:active .leg-prosthesis-list__value {
+  &::before,
+  &::after {
+    background-color: $active;
+  }
+}
+
+.leg-prosthesis-list__fieldset--opened .leg-prosthesis-list__value {
+  &::after {
+    content: none;
+  }
+}
+
+.leg-prosthesis-list__fieldset--opened .leg-prosthesis-list__description {
+  display: block;
+}
+
+.leg-prosthesis-list__footnote-sign {
+  color: $green;
+}
