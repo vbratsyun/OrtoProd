@@ -7,7 +7,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 20px 40px;
+    gap: 20px 60px;
     max-width: 863px;
   }
 
@@ -27,13 +27,8 @@
   @media (min-width: $tablet-width) {
     grid-template-columns: 90px 1fr;
 
-    // &:nth-child(even) {
-    //   justify-self: right;
-    // }
-
     &--consultation {
       width: 99%;
-      // text-align: justify;
       grid-column: 1/-1;
     }
   }
@@ -87,12 +82,11 @@
 
 .contacts-list__text {
   font-style: normal;
+  font-size: 13.5px;
   color: $main-color;
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    &--address {
-      max-width: 456px;
-    }
+    font-size: 14px;
   }
 }

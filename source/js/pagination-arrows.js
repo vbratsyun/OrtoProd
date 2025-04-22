@@ -1,6 +1,9 @@
 const teamItems = document.querySelectorAll(".team-list__item");
 const buttonBack = document.querySelector(".pagination-arrows__prew");
 const buttonForward = document.querySelector(".pagination-arrows__next");
+const team = document.querySelector(".team");
+
+team.classList.remove('nav--team');
 
 // Функция для обновления активного слайда и кнопки пагинации
 const updateCarousel = (index) => {

@@ -1,6 +1,5 @@
 .products {
   padding: 22px 0 0;
-  // background-color: $grey-background;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -38,4 +37,12 @@
     padding: 18px 26px;
     font-size: 19.5px;
   }
+}
+
+.nojs--products .products__link {
+  display: none;
+}
+
+.nojs--products .products-list__item {
+  display: block;
 }

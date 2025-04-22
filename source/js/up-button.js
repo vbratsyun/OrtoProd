@@ -1,5 +1,5 @@
 const upButton = document.querySelector('.page-body__up-button');
-const targetSection = document.querySelector('.services'); // Секция, при достижении которой появится кнопка
+const targetSection = document.getElementById('services'); // Секция, при достижении которой появится кнопка
 
 const onUpButtonClick = () => {
   window.scrollTo({

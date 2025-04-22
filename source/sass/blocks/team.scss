@@ -7,3 +7,11 @@
     max-width: 1030px;
   }
 }
+
+.nojs--team .pagination-arrows {
+  display: none;
+}
+
+.nojs--team .team-list__item {
+  display: flex;
+}
