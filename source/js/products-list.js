@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let totalImages = allImages.length;
   let imagesLoaded = 4; // Начальное количество показанных картинок
 
-  products.classList.remove("nojs--products");
+  products.classList.remove("products--nojs");
 
   // Функция для обновления количества отображаемых картинок
   function updateVisibleImagesCount() {
