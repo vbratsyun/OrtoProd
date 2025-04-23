@@ -5,7 +5,7 @@ const buttonForward = document.querySelector(
 const legProsthesisList = document.querySelector(".leg-prosthesis-list");
 const carousel = document.querySelector(".carousel");
 
-carousel.classList.remove('nojs--carousel');
+carousel.classList.remove('carousel--nojs');
 
 buttonForward.addEventListener("click", () => {
     legProsthesisList.append(legProsthesisList.children[0]);
