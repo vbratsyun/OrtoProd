@@ -1,0 +1,68 @@
+.components-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.components-list__control {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.components-list__control-mark {
+  align-self: center;
+  position: relative;
+  min-width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  // background-color: rgba($grey-line, 0.2);
+  border: 1px solid rgba($grey-line, 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $green;
+  }
+}
+
+.components-list__control-label {
+  font-size: 12px;
+  //   color: $main-color;
+  color: $grey-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+}
+
+.components-list__control-radio[type="radio"]:checked + .components-list__control-mark::before {
+  display: block;
+}
+
+.components-list__control:hover .components-list__control-mark {
+  border-color: $hover;
+}
+
+.components-list__control:hover .components-list__control-label {
+  color: $hover;
+}
+
+.components-list__control:active .components-list__control-mark {
+  border-color: $active;
+}
+
+.components-list__control:active .components-list__control-label {
+  color: $active;
+}

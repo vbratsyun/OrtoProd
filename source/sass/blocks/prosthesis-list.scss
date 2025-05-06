@@ -1,34 +1,65 @@
-.leg-prosthesis-list {
+.prosthesis-list {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-.leg-prosthesis-list__item {
+.prosthesis-list__item {
   display: none;
   flex-direction: column;
   gap: 10px;
+  min-height: 633px;
 
   &:first-of-type {
     display: flex;
   }
 
+  &--device-for-the-lower-extremities {
+    min-height: 723px;
+  }
+
+  &--splint-on-the-lower-extremities {
+    min-height: 699px;
+  }
+
   @media (min-width: $tablet-width) {
     grid-template-columns: 0.35fr 1fr;
     gap: 20px;
+    // min-height: 460px;
+    min-height: 493px;
 
     &:first-of-type {
       display: grid;
+    }
+
+    &--device-for-the-lower-extremities {
+      min-height: 487px;
+    }
+
+    &--splint-on-the-lower-extremities {
+      min-height: 454px;
+      // min-height: 537px; для разных типов
     }
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
+    // min-height: 460px;
+    min-height: 498px;
+
+    &--device-for-the-lower-extremities {
+      min-height: 495px;
+    }
+
+    &--splint-on-the-lower-extremities {
+      min-height: 540px;
+    }
   }
 }
 
-.leg-prosthesis-list__container {
+.prosthesis-list__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   &--image {
@@ -60,8 +91,8 @@
   }
 }
 
-.leg-prosthesis-list__wrapper {
-  min-height: 173px;
+.prosthesis-list__wrapper {
+  // min-height: 173px;
 
   @media (min-width: 441px) {
     min-height: auto;
@@ -76,11 +107,34 @@
 
     &--constructive {
       grid-row: 2/3;
+      min-height: 275px;
     }
   }
 }
 
-.leg-prosthesis-list__image {
+.prosthesis-list__info {
+  width: 125px;
+  height: 194px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $green;
+  padding: 60px 10px;
+  border: 1px solid $green;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    height: 193px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16.5px;
+    width: 242px;
+    height: 423px;
+    padding: 160px 10px;
+  }
+}
+
+.prosthesis-list__image {
   object-fit: cover;
   cursor: pointer;
 
@@ -90,12 +144,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 423px;
+    height: 323px;
   }
 }
 
-.leg-prosthesis-list__title {
+.prosthesis-list__title {
   font-size: 21px;
+  // min-height: 63px;
 
   &--swimming {
     width: 98%;
@@ -110,7 +165,7 @@
   }
 }
 
-.leg-prosthesis-list__text {
+.prosthesis-list__text {
   color: $grey-text;
   margin-bottom: 0;
 
@@ -119,11 +174,17 @@
   }
 }
 
-.leg-prosthesis-list__fieldset {
+.prosthesis-list__form {
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+  }
+}
+
+.prosthesis-list__fieldset {
   border-bottom: 1px solid $grey-line;
 }
 
-.leg-prosthesis-list__button {
+.prosthesis-list__button {
   position: relative;
   display: grid;
   align-items: center;
@@ -137,7 +198,7 @@
   box-sizing: border-box;
 }
 
-.leg-prosthesis-list__value {
+.prosthesis-list__value {
   display: block;
   font-size: 12px;
   text-transform: uppercase;
@@ -169,7 +230,7 @@
   }
 }
 
-.leg-prosthesis-list__description {
+.prosthesis-list__description {
   display: none;
   font-size: 12px;
   color: $grey-text;
@@ -180,13 +241,13 @@
   }
 }
 
-.leg-prosthesis-list__price {
+.prosthesis-list__price {
   @media (min-width: $tablet-width) {
     font-size: 16.5px;
   }
 }
 
-.leg-prosthesis-list__price-value {
+.prosthesis-list__price-value {
   font-size: 18px;
   font-weight: 700;
   color: $title-text;
@@ -200,38 +261,38 @@
   }
 }
 
-.leg-prosthesis-list__button:hover {
+.prosthesis-list__button:hover {
   color: $hover;
 }
 
-.leg-prosthesis-list__button:hover .leg-prosthesis-list__value {
+.prosthesis-list__button:hover .prosthesis-list__value {
   &::before,
   &::after {
     background-color: $hover;
   }
 }
 
-.leg-prosthesis-list__button:active {
+.prosthesis-list__button:active {
   color: $active;
 }
 
-.leg-prosthesis-list__button:active .leg-prosthesis-list__value {
+.prosthesis-list__button:active .prosthesis-list__value {
   &::before,
   &::after {
     background-color: $active;
   }
 }
 
-.leg-prosthesis-list__fieldset--opened .leg-prosthesis-list__value {
+.prosthesis-list__fieldset--opened .prosthesis-list__value {
   &::after {
     content: none;
   }
 }
 
-.leg-prosthesis-list__fieldset--opened .leg-prosthesis-list__description {
+.prosthesis-list__fieldset--opened .prosthesis-list__description {
   display: block;
 }
 
-.leg-prosthesis-list__footnote-sign {
+.prosthesis-list__footnote-sign {
   color: $green;
 }
