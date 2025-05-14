@@ -112,30 +112,8 @@
   }
 }
 
-.prosthesis-list__info {
-  width: 125px;
-  height: 194px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $green;
-  padding: 60px 10px;
-  border: 1px solid $green;
-  box-sizing: border-box;
-
-  @media (min-width: $tablet-width) {
-    height: 193px;
-  }
-
-  @media (min-width: $desktop-width) {
-    font-size: 16.5px;
-    width: 242px;
-    height: 423px;
-    padding: 160px 10px;
-  }
-}
-
 .prosthesis-list__image {
-  object-fit: cover;
+  object-fit: contain;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
@@ -145,6 +123,11 @@
 
   @media (min-width: $desktop-width) {
     height: 323px;
+
+    &--on-site-prosthetics {
+      height: auto;
+      width: 241px;
+    }
   }
 }
 
