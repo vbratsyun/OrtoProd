@@ -3,9 +3,6 @@ const buttonForward = document.querySelector(
   ".controls__button-forward"
 );
 const legProsthesisList = document.querySelector(".prosthesis-list");
-const carousel = document.querySelector(".carousel");
-
-carousel.classList.remove('carousel--nojs');
 
 buttonForward.addEventListener("click", () => {
     legProsthesisList.append(legProsthesisList.children[0]);
