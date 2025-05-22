@@ -1,3 +1,8 @@
+const carousel = document.querySelector(".carousel");
+
+carousel.classList.remove('carousel--nojs');
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll(".prosthesis-list__button");
 

@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const pictures = imageContainer.querySelectorAll("picture");
     const priceValueElement = item.querySelector(".prosthesis-list__price-value--radio");
 
-    // Если радиокнопки есть
     if (radios.length > 0 && priceValueElement) {
       function updateVisiblePictures() {
         const selectedRadio = item.querySelector(".components-list__control-radio:checked");
@@ -81,9 +80,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const selectedValue = selectedRadio.value;
 
+        let visibleCount = 0;
         pictures.forEach((picture) => {
-          picture.style.display =
-            picture.dataset.option === selectedValue ? "block" : "none";
+          if (picture.dataset.option === selectedValue && visibleCount < 2) {
+            picture.style.display = "block";
+            visibleCount++;
+          } else {
+            picture.style.display = "none";
+          }
         });
 
         const newPrice = selectedRadio.getAttribute("data-price");
@@ -118,7 +122,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     } else {
-      // Элемент без радиокнопок — просто открываем все картинки
+      // Показываем только первые две картинки
+      pictures.forEach((picture, index) => {
+        picture.style.display = index < 2 ? "block" : "none";
+      });
+
+      // Элемент без радиокнопок — просто открываем все картинки в модалке
       pictures.forEach((picture) => {
         const img = picture.querySelector("img");
         img.addEventListener("click", () => {
