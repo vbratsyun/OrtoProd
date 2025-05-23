@@ -250,6 +250,17 @@
 
   @media (min-width: $tablet-width) {
     font-size: 16.5px;
+
+    &::before {
+      width: 16px;
+      height: 1px;
+    }
+
+    &::after {
+      width: 1px;
+      height: 16px;
+      right: 7px;
+    }
   }
 }
 
@@ -324,4 +335,27 @@
 
 .prosthesis-list__footnote-sign {
   color: $green;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+}
+
+.prosthesis-list__button--pulse .prosthesis-list__value::after {
+  animation: pulse 1s infinite;
+  background-color: $green;
+}
+
+.prosthesis-list__button--pulse .prosthesis-list__value::before {
+  animation: pulse 1s infinite;
+  background-color: $green;
 }

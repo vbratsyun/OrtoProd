@@ -1,17 +1,35 @@
-const carousel = document.querySelector(".carousel");
-
-carousel.classList.remove('carousel--nojs');
-
-
 document.addEventListener('DOMContentLoaded', () => {
+  const carousel = document.querySelector(".carousel");
+  if (carousel) {
+    carousel.classList.remove('carousel--nojs');
+  }
+
   const buttons = document.querySelectorAll(".prosthesis-list__button");
 
   buttons.forEach(button => {
+    const value = button.querySelector('.prosthesis-list__value');
+    const fieldset = button.closest(".prosthesis-list__fieldset");
+
+    const shouldPulse = button.hasAttribute('data-pulsing');
+
+    if (shouldPulse && fieldset && !fieldset.classList.contains('prosthesis-list__fieldset--opened')) {
+      button.classList.add('prosthesis-list__button--pulse');
+    }
+
     button.addEventListener("click", (event) => {
       event.preventDefault();
-      const fieldset = event.target.closest(".prosthesis-list__fieldset");
-      if (fieldset) {
-        fieldset.classList.toggle("prosthesis-list__fieldset--opened");
+      const fieldset = button.closest(".prosthesis-list__fieldset");
+      if (!fieldset) return;
+
+      const isOpened = fieldset.classList.contains("prosthesis-list__fieldset--opened");
+      fieldset.classList.toggle("prosthesis-list__fieldset--opened");
+
+      if (shouldPulse) {
+        if (!isOpened) {
+          button.classList.remove('prosthesis-list__button--pulse');
+        } else {
+          button.classList.add('prosthesis-list__button--pulse');
+        }
       }
     });
   });
@@ -34,21 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const newPrice = checkedRadio.getAttribute('data-price');
       const currencyPart = priceValueElement.querySelector('.prosthesis-list__footnote-sign')?.outerHTML || '';
 
-      // Обновляем цену
       priceValueElement.innerHTML = `${newPrice}${currencyPart} руб.`;
 
-      // Показываем/скрываем картинки
       pictures.forEach(pic => {
         pic.style.display = pic.getAttribute('data-option') === option ? '' : 'none';
       });
 
-      // Показываем/скрываем описания
       descriptions.forEach(desc => {
         desc.style.display = desc.getAttribute('data-option') === option ? '' : 'none';
       });
     }
 
-    // Если радио заблокировано (disabled), разблокируем и ставим checked при клике
     componentsList.addEventListener('click', (event) => {
       const label = event.target.closest('label.components-list__control');
       if (!label) return;
@@ -71,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateContentFromCheckedRadio();
-
     componentsList.addEventListener('change', updateContentFromCheckedRadio);
   });
 });
