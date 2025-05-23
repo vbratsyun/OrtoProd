@@ -69,18 +69,20 @@
 }
 
 .page-header__logo-image {
+  position: relative;
+  right: 17px;
   display: block;
   object-fit: cover;
-  width: 115px;
+  width: 140px;
   height: 55px;
 
   @media (min-width: $tablet-width) {
-    width: 130px;
+    width: 170px;
     height: 63px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 163px;
+    width: 180px;
     height: 72px;
   }
 }

@@ -11,7 +11,7 @@
 
 .nav--closed .nav__toggle {
   position: absolute;
-  top: -61px;
+  top: -63px;
   right: 20px;
   z-index: 2;
   width: 45px;
@@ -25,7 +25,7 @@
     width: 45px;
     height: 2.5px;
     background-color: $green;
-    box-shadow: 0 10px 0 $green, 0 20px 0 $green;
+    box-shadow: 0 11px 0 $green, 0 22px 0 $green;
   }
 
   @media (min-width: $mobile-width-only) {
@@ -43,7 +43,7 @@
 
 .nav--opened .nav__toggle {
   position: absolute;
-  top: -61px;
+  top: -63px;
   right: 20px;
   width: 45px;
   height: 24px;
@@ -54,7 +54,7 @@
     position: absolute;
     top: 10px;
     left: 6px;
-    width: 31px;
+    width: 34px;
     height: 2.5px;
     background-color: $green;
     border-radius: 0;
@@ -74,7 +74,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    top: -66px;
+    top: -67px;
   }
 
   @media (min-width: $desktop-width) {
