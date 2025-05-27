@@ -1,0 +1,25 @@
+.intro-articles__text {
+  width: 100%;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 13.5px;
+  color: $main-color;
+  margin: 0 0 20px auto;
+
+  &:last-of-type {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87%;
+    font-size: 18px;
+    line-height: normal;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    font-size: 22px;
+    margin: 0 0 20px auto;
+  }
+}

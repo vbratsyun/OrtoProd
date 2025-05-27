@@ -1,0 +1,23 @@
+.articles-filters {
+  position: relative;
+  left: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.articles-filters__button {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 5px;
+  color: $green;
+
+  @media (min-width: $tablet-width) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+  }
+}

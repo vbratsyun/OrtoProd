@@ -9,3 +9,19 @@
     margin-bottom: 45px;
   }
 }
+
+.main-inner__intro-articles {
+  margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.main-inner__articles {
+  margin-bottom: 45px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 65px;
+  }
+}

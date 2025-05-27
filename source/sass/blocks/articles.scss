@@ -1,0 +1,7 @@
+.articles__articles-filters {
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
