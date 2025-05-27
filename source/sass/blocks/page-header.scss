@@ -70,12 +70,13 @@
 
 .page-header__logo-image {
   position: relative;
-  right: 17px;
+  right: 14px;
   display: block;
   width: 140px;
   height: 55px;
 
   @media (min-width: $tablet-width) {
+    right: 17px;
     width: 170px;
     height: 63px;
   }
