@@ -3,7 +3,7 @@
   left: -5px;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 5px 10px;
 }
 
 .articles-filters__button {
@@ -11,7 +11,23 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 5px;
-  color: $green;
+  color: $grey-text;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    color: $hover;
+    border-bottom: 1px solid $hover;
+  }
+
+  &:active {
+    color: $active;
+    border-bottom: 1px solid $active;
+  }
+
+  &--current {
+    color: $active;
+    border-bottom: 1px solid $active;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 12px;

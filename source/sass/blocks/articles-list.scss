@@ -13,6 +13,15 @@
 .articles-list__item {
   background-color: $grey-background;
   padding: 29px 20px 22px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($hover, 0.1);
+  }
+
+  &:active {
+    background-color: rgba($active, 0.1);
+  }
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px 22px;
@@ -38,7 +47,7 @@
 
 .articles-list__tag {
   font-size: 10px;
-  padding: 5px;
+  padding: 5px 10px;
   color: $green;
   text-transform: uppercase;
   background-color: rgba($green, 0.1);
@@ -50,4 +59,12 @@
   @media (min-width: $desktop-width) {
     font-size: 14px;
   }
+}
+
+.articles-list__item:has(.articles-list__link:hover) {
+  background-color: rgba($hover, 0.1);
+}
+
+.articles-list__item:has(.articles-list__link:active) {
+  background-color: rgba($active, 0.1);
 }
