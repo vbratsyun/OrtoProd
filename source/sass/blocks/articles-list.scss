@@ -11,17 +11,9 @@
 }
 
 .articles-list__item {
+  position: relative;
   background-color: $grey-background;
   padding: 29px 20px 22px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba($hover, 0.1);
-  }
-
-  &:active {
-    background-color: rgba($active, 0.1);
-  }
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px 22px;
@@ -59,6 +51,77 @@
   @media (min-width: $desktop-width) {
     font-size: 14px;
   }
+}
+
+// .articles-list__item:has(.articles-list__link:hover) {
+//   background-color: rgba($hover, 0.1);
+// }
+
+// .articles-list__item:has(.articles-list__link:active) {
+//   background-color: rgba($active, 0.1);
+// }
+
+.articles-list__link {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+  height: 24px;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: $green;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 13px;
+    left: 49px;
+    background: url("../img/icons/services/icon-arrow.svg") no-repeat;
+    transition: width 5ms;
+    background-size: cover;
+  }
+
+  &:hover::after {
+    content: "";
+    top: 12px;
+    width: 27px;
+    height: 14px;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    width: 120px;
+
+    &::after {
+      left: 73px;
+    }
+
+    &:hover::after {
+      top: 12.5px;
+      width: 30px;
+      height: 16px;
+    }
+  }
+}
+
+.articles-list__item:hover .articles-list__title,
+.articles-list__item:hover .articles-list__description,
+.articles-list__item:hover .articles-list__tag {
+  opacity: 0.2;
+}
+
+.articles-list__item:hover .articles-list__link {
+  display: block;
 }
 
 .articles-list__item:has(.articles-list__link:hover) {
