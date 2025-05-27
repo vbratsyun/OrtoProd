@@ -110,12 +110,10 @@
               >
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link link" href="index.html#articles"
-                >Статьи</a
-              >
+              <a class="nav-list__link link">Статьи</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link link" href="index.html#articles"
+              <a class="nav-list__link link" href="#"
                 >Заказ ТСР <span class="br br--mobile"></span> с использованием
                 Сертификата</a
               >
@@ -178,9 +176,10 @@
         </div>
       </header>
       <section class="main-inner__intro-articles intro-articles">
-        <div class="wrapper">
-          <h2 class="visually-hidden">
-            Материалы о передовых решениях в протезировании и ортопедии
+        <div class="wrapper intro-articles__container">
+          <h2 class="intro-articles__title title">
+            Протезирование <span class="br br--desktop"></span> и ортопедия
+            сегодня
           </h2>
           <p class="intro-articles__text">
             Добро пожаловать на информационную страницу специализированного
@@ -189,8 +188,9 @@
           </p>
           <p class="intro-articles__text">
             Здесь вы найдёте информацию о протезах, ортезах и ортопедических
-            стельках, включая советы по выбору, адаптации и реабилитации. Мы
-            собрали актуальную информацию — от базовых понятий до передовых
+            стельках, включая советы <span class="br br--desktop"></span> по
+            выбору, адаптации и реабилитации. Мы собрали актуальную информацию —
+            от базовых понятий <span class="br br--desktop"></span> до передовых
             технологий, чтобы помочь вам на пути к активной, комфортной и
             полноценной жизни.
           </p>
@@ -200,27 +200,53 @@
         <h2 class="visually-hidden title">Список статей</h2>
         <div class="wrapper">
           <div class="articles__articles-filters articles-filters">
-            <button class="articles-filters__button button">Все</button>
-            <button class="articles-filters__button button" type="button">
+            <button
+              class="articles-filters__button button articles-filters__button--current"
+              type="button"
+              value="all"
+            >
+              Все
+            </button>
+            <button
+              class="articles-filters__button button"
+              type="button"
+              value="general"
+            >
               Общее
             </button>
 
-            <button class="articles-filters__button button" type="button">
+            <button
+              class="articles-filters__button button"
+              type="button"
+              value="prosthteics"
+            >
               Протезирование
             </button>
-            <button class="articles-filters__button button" type="button">
+            <button
+              class="articles-filters__button button"
+              type="button"
+              value="insoles"
+            >
               Cтельки
             </button>
-            <button class="articles-filters__button button" type="button">
+            <button
+              class="articles-filters__button button"
+              type="button"
+              value="orthoses"
+            >
               Ортезы
             </button>
-            <button class="articles-filters__button button" type="button">
+            <button
+              class="articles-filters__button button"
+              type="button"
+              value="materials-and-technologies"
+            >
               Материалы и технологии
             </button>
           </div>
 
           <ul class="articles-list list" id="services">
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="general">
               <a
                 class="articles-list__link link"
                 href="iz-istorii-protezirovaniya.html"
@@ -236,7 +262,7 @@
                 <span class="articles-list__tag">Общее</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -254,7 +280,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -272,7 +298,7 @@
                 <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -290,7 +316,7 @@
                 <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="general">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -308,7 +334,7 @@
                 <span class="articles-list__tag">Общее</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -325,7 +351,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -342,7 +368,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -360,7 +386,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -379,7 +405,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="general">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -398,7 +424,7 @@
                 <span class="articles-list__tag">Общее</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="insoles">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -417,7 +443,7 @@
                 <span class="articles-list__tag">Стельки</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -436,13 +462,13 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
               >
                 <h3 class="articles-list__title subtitle">
-                  Ортез и протез. В чём разница?
+                  Ортезы и протез. В чём разница?
                 </h3>
                 <p class="articles-list__description">
                   Статья объясняет ключевые различия и сходства между протезами
@@ -451,10 +477,10 @@
                   показания к применению и особенности использования в
                   зависимости от состояния пациента.
                 </p>
-                <span class="articles-list__tag">Ортез</span>
+                <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item" >
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -466,10 +492,10 @@
                   показания и важность консультации с врачом перед выбором
                   изделия.
                 </p>
-                <span class="articles-list__tag">Ортез</span>
+                <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -488,7 +514,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -497,16 +523,16 @@
                   Показания к ношению тутора для коленного сустава
                 </h3>
                 <p class="articles-list__description">
-                  Ортез для колена обеспечивает необходимую фиксацию сустава с
+                  Ортезы для колена обеспечивает необходимую фиксацию сустава с
                   учётом индивидуальных показаний и степени травмы, способствуя
                   эффективной реабилитации. Изделия из комфортных материалов
                   изготавливаются по персональным меркам и бывают разной
                   жёсткости для оптимального восстановления функции колена.
                 </p>
-                <span class="articles-list__tag">Ортез</span>
+                <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -522,10 +548,10 @@
                   ношения изделий для эффективной поддержки и выравнивания
                   позвоночника.
                 </p>
-                <span class="articles-list__tag">Ортез</span>
+                <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -543,7 +569,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -562,7 +588,10 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li
+              class="articles-list__item"
+              data-category="materials-and-technologies"
+            >
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -581,7 +610,7 @@
                 <span class="articles-list__tag">Материалы и технологии</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -599,7 +628,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -608,17 +637,17 @@
                   Как выбрать ортез для коленного сустава
                 </h3>
                 <p class="articles-list__description">
-                  Ортез коленного сустава помогает фиксировать сустав, снижать
+                  Ортезы коленного сустава помогает фиксировать сустав, снижать
                   нагрузку и замедлять развитие патологий, при этом его выбор
                   должен учитывать индивидуальные показания и противопоказания.
                   Для эффективного использования необходима консультация
                   специалиста, который подберёт оптимальную модель с учётом
                   состояния пациента.
                 </p>
-                <span class="articles-list__tag">Ортез</span>
+                <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="insoles">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -635,7 +664,7 @@
                 <span class="articles-list__tag">Стельки</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -654,7 +683,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -673,7 +702,7 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="prosthteics">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -692,25 +721,29 @@
                 <span class="articles-list__tag">Протезирование</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="orthoses">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
               >
                 <h3 class="articles-list__title subtitle">
-                  Ортез голеностопный: показания к применению и особенности выбора
+                  Ортезы голеностопный: показания к применению и особенности
+                  выбора
                 </h3>
                 <p class="articles-list__description">
-                  Ортез голеностопного сустава обеспечивает надёжную фиксацию и
+                  Ортезы голеностопного сустава обеспечивает надёжную фиксацию и
                   защиту, сохраняя при этом подвижность конечности, что
                   способствует профилактике травм и ускорению выздоровления. Его
                   выбор и применение должны основываться на рекомендациях врача
                   и точном соответствии индивидуальным параметрам пациента.
                 </p>
-                <span class="articles-list__tag">Ортез</span>
+                <span class="articles-list__tag">Ортезы</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li
+              class="articles-list__item"
+              data-category="materials-and-technologies"
+            >
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -719,7 +752,7 @@
                   Бионические протезы: преимущества и особенности использования
                 </h3>
                 <p class="articles-list__description">
-                  Ортез голеностопного сустава обеспечивает надёжную фиксацию и
+                  Ортезы голеностопного сустава обеспечивает надёжную фиксацию и
                   защиту при травмах и заболеваниях, сохраняя при этом
                   подвижность конечности. Правильный подбор и своевременное
                   использование ортеза способствует профилактике осложнений,
@@ -728,7 +761,7 @@
                 <span class="articles-list__tag">Материалы и технологии</span>
               </a>
             </li>
-            <li class="articles-list__item">
+            <li class="articles-list__item" data-category="insoles">
               <a
                 class="articles-list__link link"
                 href="osobennosti-protezov-nog.html"
@@ -891,5 +924,6 @@
     </button>
     <script src="js/script.js"></script>
     <script src="js/up-button.js"></script>
+    <script src="js/articles-filter.js"></script>
   </body>
 </html>
