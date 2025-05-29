@@ -1,7 +1,19 @@
 .breadcrumbs-list {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap; /* запрет переноса */
   gap: 15px;
+  overflow: hidden; /* чтобы скрыть лишнее */
+  white-space: nowrap;
+}
+
+.breadcrumbs-list__item {
+  flex-shrink: 0; /* чтобы не сжимались */
+}
+
+.breadcrumbs-list__item:last-child {
+  flex-shrink: 1; /* только последний можно сжимать */
+  min-width: 0; /* важно для обрезания текста */
 }
 
 .breadcrumbs-list__item:not(:last-child) {
@@ -25,9 +37,14 @@
   color: $grey-text;
   padding: 5px 8px;
   letter-spacing: -0.2px;
+  white-space: nowrap;
 
   &--current {
     color: $green;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    max-width: 100%;
   }
 
   @media (min-width: $tablet-width) {

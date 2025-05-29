@@ -14,6 +14,7 @@
   position: relative;
   background-color: $grey-background;
   padding: 29px 20px 22px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     padding: 32px 20px 22px;
@@ -22,18 +23,22 @@
 
 .articles-list__title {
   font-size: 21px;
+  margin-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
+    margin-bottom: 24px;
   }
 }
 
 .articles-list__description {
   font-size: 14px;
   color: $grey-text;
+  margin: 0 auto 14px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
+    margin: 0 auto 16px;
   }
 }
 

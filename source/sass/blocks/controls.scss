@@ -2,6 +2,18 @@
   display: flex;
   gap: 20px;
   justify-content: right;
+
+  @media (min-width: $tablet-width) {
+    &--useful-articles {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--useful-articles {
+      display: flex;
+    }
+  }
 }
 
 .controls__button {
