@@ -18,7 +18,17 @@
   }
 }
 
-.main-inner__articles {
+.main-inner__article-container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.main-inner__articles,
+.main-inner__article,
+.main-inner__useful-articles {
   margin-bottom: 45px;
 
   @media (min-width: $desktop-width) {
