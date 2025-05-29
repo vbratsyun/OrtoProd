@@ -37,7 +37,8 @@
 }
 
 .useful-articles__subtitle {
-  min-height: 63px;
+  // min-height: 63px;
+  min-height: 94px;
 
   @media (min-width: $tablet-width) {
     min-height: auto;
