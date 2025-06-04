@@ -1,0 +1,73 @@
+.about-the-svoboda-orto__title {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.about-the-svoboda-orto__video-container {
+  width: 100%;
+  aspect-ratio: 14 / 9;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.about-the-svoboda-orto__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-the-svoboda-orto__description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 65px;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 60px;
+  }
+}
+
+.about-the-svoboda-orto__text {
+  font-size: 12.5px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+  }
+}
+
+.about-the-svoboda-orto__requisites-title {
+  position: relative;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: url("../img/icons/icon-requisites.svg") no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 50px;
+
+    &::after {
+      top: -22px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
