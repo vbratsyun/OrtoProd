@@ -6,6 +6,23 @@
   margin-bottom: 20px;
 }
 
+.carousel__pager {
+  user-select: none;
+  color: $green;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+  }
+}
+
+.carousel__current {
+  font-weight: 600;
+}
+
+.carousel__total {
+  color: $title-text;
+}
+
 .carousel--nojs .prosthesis-list__button {
   display: none;
 }

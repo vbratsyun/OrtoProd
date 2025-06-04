@@ -2,6 +2,7 @@
   display: flex;
   gap: 20px;
   justify-content: right;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
     &--useful-articles {
@@ -17,7 +18,11 @@
 }
 
 .controls__button {
-  padding: 10px 0 10px 10px;
+  padding: 10px 5px 10px 0;
+}
+
+.controls__button-forward {
+  padding: 10px 0 10px 5px;
 }
 
 .controls__button:hover .controls__button-icon {
