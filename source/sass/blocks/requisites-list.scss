@@ -24,6 +24,11 @@
 }
 
 .requisites-list__item {
+  &--requisites,
+  &--address {
+    max-width: 520px;
+  }
+
   @media (min-width: $tablet-width) {
     &--name {
       order: 1;
@@ -50,11 +55,11 @@
     }
 
     &--address {
+      max-width: fit-content;
       order: 7;
     }
 
     &--requisites {
-      max-width: 520px;
       order: 8;
     }
   }
