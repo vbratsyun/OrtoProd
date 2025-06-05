@@ -65,6 +65,16 @@
     color: $active;
   }
 
+  &--current:hover,
+  &--current:active {
+    color: $green;
+  }
+
+  &--current {
+    color: $green;
+    border-bottom: 1px solid $green;
+  }
+
   @media (min-width: $desktop-width) {
     display: block;
     padding: 18px 7px;

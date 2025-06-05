@@ -13,6 +13,7 @@
   padding: 5px;
   color: $grey-text;
   border-bottom: 1px solid transparent;
+  box-sizing: border-box;
 
   &:hover {
     color: $hover;
@@ -25,8 +26,8 @@
   }
 
   &--current {
-    color: $active;
-    border-bottom: 1px solid $active;
+    color: $green;
+    border-bottom: 1px solid $green;
   }
 
   @media (min-width: $tablet-width) {
