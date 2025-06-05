@@ -7,11 +7,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 60px;
-    // max-width: 863px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr) 283px;
   }
 }
 
@@ -30,50 +29,39 @@
       order: 1;
     }
 
-    &--address {
+    &--registration {
+      order: 2;
+    }
+
+    &--inn {
+      order: 3;
+    }
+
+    &--kpp {
+      order: 4;
+    }
+
+    &--ogrn {
       order: 5;
     }
 
     &--contacts {
-      order: 2;
+      order: 6;
     }
 
-    &--ogrn {
-      order: 3;
-    }
-
-    &--inn {
-      order: 4;
+    &--address {
+      order: 7;
     }
 
     &--requisites {
-      order: 6;
+      max-width: 520px;
+      order: 8;
     }
   }
 
-  @media (min-width: $desktop-width) {
-    &--name {
-      order: 1;
-    }
-
-    &--address {
-      order: 5;
-    }
-
-    &--contacts {
-      order: 4;
-    }
-
-    &--ogrn {
-      order: 3;
-    }
-
-    &--inn {
-      order: 2;
-    }
-
+  @media (min-width: $tablet-width) {
     &--requisites {
-      order: 6;
+      max-width: fit-content;
     }
   }
 }

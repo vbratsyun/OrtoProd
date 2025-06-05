@@ -7,8 +7,9 @@
 }
 
 .about-the-svoboda-orto__video-container {
-  width: 100%;
-  aspect-ratio: 14 / 9;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
   overflow: hidden;
   margin-bottom: 20px;
 
@@ -18,10 +19,11 @@
 }
 
 .about-the-svoboda-orto__video {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .about-the-svoboda-orto__description {
@@ -53,12 +55,74 @@
   }
 }
 
-.about-the-svoboda-orto__text {
+.about-the-svoboda-orto__text,
+.about-the-svoboda-orto__list {
   font-size: 12.5px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 16.5px;
+    text-align: justify;
+  }
+}
+
+.about-the-svoboda-orto__text {
+  @media (min-width: $desktop-width) {
+    &--general {
+      order: 1;
+    }
+
+    &--team {
+      order: 3;
+    }
+
+    &--services {
+      order: 2;
+    }
+
+    &--location {
+      order: 4;
+    }
+
+    &--mission {
+      position: relative;
+      order: 5;
+      grid-column: 1/3;
+      justify-self: center;
+      width: 821px;
+      font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+      font-size: 24px;
+      line-height: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: $green;
+      word-spacing: 4px;
+      margin: 20px auto 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 25px;
+        height: 25px;
+        opacity: 0.5;
+      }
+
+      &::before {
+        left: 35px;
+        background: url("../img/icons/icon-quote-left.svg") no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        top: 69px;
+        right: 218px;
+        background: url("../img/icons/icon-quote-right.svg") no-repeat;
+        background-size: contain;
+      }
+    }
   }
 }
 

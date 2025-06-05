@@ -1,6 +1,6 @@
 .prosthesis-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 60px;
 }
 
@@ -8,35 +8,6 @@
   display: none;
   flex-direction: column;
   gap: 10px;
-
-  &--leg,
-  &--insoles {
-    min-height: 646px;
-  }
-
-  &--hip {
-    min-height: 661px;
-  }
-
-  &--lower-limbs {
-    min-height: 688px;
-  }
-
-  &--splint-lower-limbs {
-    min-height: 664px;
-  }
-
-  &--splint-upper-limbs {
-    min-height: 653px;
-  }
-
-  &--orthosis {
-    min-height: 749px;
-  }
-
-  &--exit-service {
-    min-height: 571px;
-  }
 
   &:first-of-type {
     display: flex;
@@ -46,30 +17,6 @@
     grid-template-columns: 0.35fr 1fr;
     grid-template-rows: max-content auto auto;
     gap: 20px;
-    // min-height: 494px;
-
-    &--leg,
-    &--insoles,
-    &--splint-lower-limbs {
-      min-height: 461px;
-    }
-
-    &--hip,
-    &--lower-limbs {
-      min-height: 486px;
-    }
-
-    &--splint-upper-limbs {
-      min-height: 446px;
-    }
-
-    &--orthosis {
-      min-height: 550px;
-    }
-
-    &--exit-service {
-      min-height: 421px;
-    }
 
     &:first-of-type {
       display: grid;
@@ -78,30 +25,6 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 0.5fr 1fr;
-    // min-height: 440px;
-
-    &--leg,
-    &--hip,
-    &--insoles,
-    &--splint-lower-limbs {
-      min-height: 440px;
-    }
-
-    &--lower-limbs {
-      min-height: 464px;
-    }
-
-    &--splint-upper-limbs {
-      min-height: 400px;
-    }
-
-    &--orthosis {
-      min-height: 472px;
-    }
-
-    &--exit-service {
-      min-height: 361px;
-    }
   }
 }
 
@@ -335,27 +258,4 @@
 
 .prosthesis-list__footnote-sign {
   color: $green;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1.5);
-    opacity: 1;
-  }
-
-  50% {
-    transform: scale(1.2);
-    opacity: 0.5;
-  }
-}
-
-.prosthesis-list__button--pulse .prosthesis-list__value::after {
-  animation: pulse 1s infinite;
-  background-color: $green;
-}
-
-.prosthesis-list__button--pulse .prosthesis-list__value::before {
-  animation: pulse 1s infinite;
-  background-color: $green;
 }

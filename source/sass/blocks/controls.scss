@@ -4,6 +4,10 @@
   justify-content: right;
   align-items: center;
 
+  &--products {
+    justify-content: left;
+  }
+
   @media (min-width: $tablet-width) {
     &--useful-articles {
       display: none;
