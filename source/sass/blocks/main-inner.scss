@@ -3,10 +3,14 @@
 }
 
 .main-inner__header {
-  margin-bottom: 20px;
+  margin-bottom: 45px;
+}
 
+.main-inner__container {
   @media (min-width: $tablet-width) {
-    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -23,6 +27,17 @@
     display: grid;
     grid-template-columns: 2.1fr 1fr;
     gap: 40px;
+  }
+}
+
+.main-inner__breadcrumbs-list {
+  position: relative;
+  left: -8px;
+
+  @media (min-width: $desktop-width) {
+    &--breadcrumbs-list {
+      left: 0;
+    }
   }
 }
 
