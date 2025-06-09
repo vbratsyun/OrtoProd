@@ -1,0 +1,93 @@
+.certificate-application {
+  @media (min-width: $desktop-width) {
+    max-width: 1030px;
+  }
+}
+
+.certificate-application__container {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    max-width: 530px;
+    margin: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -500px;
+      width: 420px;
+      height: 100%;
+      background-image: url("../img/zakaz-TSR-po-sertifikatu/background-image-2-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/zakaz-TSR-po-sertifikatu/background-image-2-desktop@2x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}
+
+.certificate-application__title {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.certificate-application__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px 20px;
+  }
+}
+
+.certificate-application__number {
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  color: $grey-text;
+
+  @media (min-width: $tablet-width) {
+    font-size: 46px;
+  }
+}
+
+.certificate-application__text {
+  position: relative;
+  padding: 10px 0 0;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $grey-line;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16.5px;
+    padding: 30px 0 0;
+
+    &::before {
+      top: 15px;
+    }
+  }
+}

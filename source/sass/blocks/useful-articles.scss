@@ -52,3 +52,11 @@
     display: block;
   }
 }
+
+.useful-articles--nojs .controls--useful-articles {
+  display: none;
+}
+
+.useful-articles--nojs .articles-list__item {
+  display: block;
+}

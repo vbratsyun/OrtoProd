@@ -9,4 +9,11 @@
   @media (min-width: 660px) {
     font-size: 24px;
   }
+
+  @media (min-width: 1200px) {
+    &--certificate {
+      font-size: 46px;
+      text-transform: none;
+    }
+  }
 }
