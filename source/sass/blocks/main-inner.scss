@@ -44,10 +44,37 @@
 .main-inner__articles,
 .main-inner__article,
 .main-inner__useful-articles,
-.main-inner__about-the-svoboda-orto {
+.main-inner__about-the-svoboda-orto,
+.main-inner__electronic-certificate,
+.main-inner__certificate-application {
   margin-bottom: 45px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 65px;
   }
+}
+
+.main-inner__preface,
+.main-inner__certificate-application {
+  margin-bottom: 65px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 85px;
+  }
+}
+
+.main-inner--products-nojs .controls--products {
+  display: none;
+}
+
+.main-inner--products-nojs .prosthesis-list__button {
+  display: none;
+}
+
+.main-inner--products-nojs .prosthesis-list__description {
+  display: block;
+}
+
+.main-inner--products-nojs .prosthesis-list__item {
+  display: grid;
 }

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".carousel");
-  if (carousel) {
-    carousel.classList.remove("carousel--nojs");
+  const mainInnerProducts = document.querySelector(".main-inner--products");
+  if (mainInnerProducts) {
+    mainInnerProducts.classList.remove("main-inner--products-nojs");
   }
 
   const buttons = document.querySelectorAll(".prosthesis-list__button");

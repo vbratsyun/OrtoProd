@@ -96,4 +96,8 @@
 
 .nav--nojs .page-header__container--nav-products {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
 }

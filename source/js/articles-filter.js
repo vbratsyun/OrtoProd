@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".articles-filters__button");
   const articles = document.querySelectorAll(".articles-list__item");
+  const articlesSection = document.querySelector(".articles");
+
+  articlesSection.classList.remove('articles--nojs');
 
   // Показываем все статьи при загрузке
   articles.forEach((item) => (item.style.display = "block"));
