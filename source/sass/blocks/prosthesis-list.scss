@@ -198,9 +198,13 @@
   }
 }
 
-.prosthesis-list__fieldset--return-of-goods .prosthesis-list__description {
-  @media (min-width: $desktop-width) {
+.prosthesis-list__fieldset--return-of-goods .prosthesis-list__description:not(:first-of-type) {
+  @media (min-width: $tablet-width) {
     width: 89%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
