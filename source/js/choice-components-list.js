@@ -45,10 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
       // Обновляем цену
       priceValueElement.innerHTML = `${newPrice}${currencyPart} руб.`;
 
-      // Показываем/скрываем картинки
+      // Показываем только первые две картинки с подходящим data-option
+      let shownCount = 0;
       pictures.forEach((pic) => {
-        pic.style.display =
-          pic.getAttribute("data-option") === option ? "" : "none";
+        if (pic.getAttribute("data-option") === option && shownCount < 2) {
+          pic.style.display = "";
+          shownCount++;
+        } else {
+          pic.style.display = "none";
+        }
       });
 
       // Показываем/скрываем описания
