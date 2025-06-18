@@ -10,21 +10,23 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  // align-items: center;
   flex-wrap: wrap;
   gap: 40px;
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
 
     &--copyright {
+      display: flex;
       flex-direction: column;
       gap: 10px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
     max-width: 1030px;
     margin: 0 auto;
 
@@ -40,18 +42,21 @@
   @media (min-width: $tablet-width) {
     width: auto;
   }
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+  }
 }
 
 .page-footer__logo-image {
   display: block;
-  width: 140px;
+  width: 115px;
   height: 55px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     position: relative;
-    right: 17px;
-    width: 170px;
+    width: 131px;
     height: 63px;
   }
 
@@ -62,9 +67,13 @@
   }
 }
 
-.page-footer__social-link {
+.page-footer__container {
   position: relative;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: center;
 
   &::before,
   &::after {
@@ -87,6 +96,13 @@
     width: auto;
     margin: 0 auto;
 
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
     &::after,
     &::before {
       content: none;
@@ -100,8 +116,6 @@
   width: 35px;
   height: 35px;
   margin: 0 auto;
-  border-radius: 50%;
-  border: 2px solid $green;
 
   @media (min-width: $desktop-width) {
     width: 40px;
@@ -132,9 +146,16 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-left: auto;
+
     &::after {
       content: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: right;
+    margin-left: auto;
   }
 }
 
@@ -151,8 +172,8 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    justify-content: flex-end;
     margin-bottom: 0;
+    justify-content: flex-end;
   }
 }
 
@@ -160,17 +181,8 @@
   color: $hover;
 }
 
-.page-footer__social-link:hover .page-footer__social-container {
-  border: 2px solid $hover;
-}
-
 .page-footer__social-link:hover .page-footer__social-icon {
   fill: $hover;
-}
-
-.page-footer__social-link:active .page-footer__social-container {
-  border: 2px solid $active;
-  background-color: rgba($color: $white, $alpha: 0.5);
 }
 
 .page-footer__social-link:active .page-footer__social-icon {
