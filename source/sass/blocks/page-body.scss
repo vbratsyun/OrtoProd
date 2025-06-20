@@ -16,34 +16,6 @@
   }
 }
 
-.page-body__up-button {
-  @media (min-width: $mobile-width-only) {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    bottom: 545px;
-    right: 2px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid $hover;
-    background-color: $white;
-    box-shadow: 2px 2px 10px $hover;
-    cursor: pointer;
-
-    &--show {
-      display: block;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 40px;
-    height: 40px;
-    bottom: 690px;
-    right: 10px;
-  }
-}
-
 .page-body__footnote-container {
   position: relative;
   display: flex;

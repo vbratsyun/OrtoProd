@@ -1,0 +1,27 @@
+.up-button {
+  @media (min-width: $mobile-width-only) {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    bottom: 545px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $hover;
+    background-color: rgba($white, 0.7);
+    box-shadow: 0 0 12px $hover;
+    cursor: pointer;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40px;
+    height: 40px;
+    bottom: 690px;
+    right: 10px;
+  }
+}
