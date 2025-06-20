@@ -19,15 +19,15 @@
   position: relative;
   width: 90%;
   max-width: 400px;
-  //   min-height: 616px;
   margin: auto;
   padding: 30px;
   background-color: $white;
   box-sizing: border-box;
 
-  //   @media (min-width: $tablet-width) {
-  //     min-height: 667px;
-  //   }
+  @media (min-width: $tablet-width) {
+    max-width: 450px;
+    padding: 30px 50px;
+  }
 }
 
 .popup__close-btn {
@@ -204,10 +204,6 @@
     min-height: 28px;
     margin-top: 10px;
   }
-
-  //   @media (min-width: $tablet-width) {
-  //     min-height: auto;
-  //   }
 }
 
 .popup__submit {
@@ -264,8 +260,7 @@
 }
 
 .popup__error-text {
-  min-height: 16px; /* или высота строки текста с запасом */
-  //   visibility: hidden;
+  min-height: 16px;
   color: $error-text;
   font-size: 12px;
   line-height: normal;
