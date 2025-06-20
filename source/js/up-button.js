@@ -1,4 +1,4 @@
-const upButton = document.querySelector(".page-body__up-button");
+const upButton = document.querySelector(".up-button");
 
 const onUpButtonClick = () => {
   window.scrollTo({
@@ -12,9 +12,9 @@ const onWindowScroll = () => {
   const halfPage = document.documentElement.scrollHeight / 2;
 
   if (scrollTop > 110) {
-    upButton.classList.add("page-body__up-button--show");
+    upButton.classList.add("up-button--show");
   } else {
-    upButton.classList.remove("page-body__up-button--show");
+    upButton.classList.remove("up-button--show");
   }
 };
 
