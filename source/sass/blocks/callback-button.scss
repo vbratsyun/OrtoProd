@@ -1,6 +1,6 @@
 .callback-button {
   position: fixed;
-  bottom: 10px;
+  bottom: 75px;
   right: 10px;
   display: flex;
   justify-content: center;
@@ -21,8 +21,6 @@
     position: absolute;
     width: 120%;
     height: 120%;
-    top: -10%;
-    left: -10%;
     border-radius: 50%;
     border: 2px solid $green;
     opacity: 0.5;
