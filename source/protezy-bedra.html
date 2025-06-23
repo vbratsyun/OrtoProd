@@ -1984,6 +1984,7 @@
       </button>
     </div>
 
+    <!-- Кнопка вернуться к началу -->
     <button class="up-button button link" type="button">
       <svg
         class="up-button-icon"
@@ -2001,11 +2002,106 @@
       </svg>
       <span class="visually-hidden">Вернуться к началу</span>
     </button>
+
+    <!-- Кнопка обратного звонка -->
+    <button class="callback-button button link" type="button">
+      <span class="callback-button__tooltip">Заказать звонок</span>
+      <img
+        class="callback-button__image"
+        src="img/icons/icon-callback-phone.svg"
+        alt="Call"
+      />
+    </button>
+
+    <!-- Попап с формой -->
+    <div class="popup popup--form">
+      <div class="popup__content">
+        <button class="popup__close-btn button" type="button"></button>
+        <h2 class="popup__title title">Заказать звонок</h2>
+        <p class="popup__text subtitle">
+          Заполните форму, мы свяжемся с вами с 9:00 до 16:30 по Мск
+        </p>
+        <form
+          class="popup__callback-form"
+          id="callback-form"
+          method="post"
+          action="https://echo.htmlacademy.ru/"
+          novalidate
+        >
+          <div class="popup__input-container">
+            <label class="popup__label" for="name">Ваше имя:</label>
+            <input
+              class="popup__input input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Петр"
+              required
+              autocomplete="off"
+            />
+            <div class="popup__error-text" id="name-error"></div>
+          </div>
+
+          <div class="popup__input-container">
+            <label class="popup__label" for="phone">Ваш телефон:</label>
+            <input
+              class="popup__input input"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="+7 (981) 108-55-97"
+              required
+              autocomplete="off"
+            />
+            <div class="popup__error-text" id="phone-error"></div>
+          </div>
+
+          <label class="popup__privacy">
+            <input
+              class="visually-hidden popup__privacy-input"
+              type="checkbox"
+              name="privacy"
+            />
+            <span class="popup__privacy-mark"></span>
+            <span class="popup__privacy-text">
+              Я согласен c
+              <a class="popup__privacy-link link" href="#" target="_blank"
+                >Политикой конфиденциальности</a
+              >
+              сайта
+            </span>
+          </label>
+
+          <button class="popup__submit" type="submit">Отправить</button>
+          <span class="popup__privacy-text popup__privacy-text--warning">
+            Нажимая кнопку, вы соглашаетесь с
+            <a class="popup__privacy-link link" href="#" target="_blank"
+              >Политикой конфиденциальности</a
+            >
+            сайта
+          </span>
+        </form>
+      </div>
+    </div>
+
+    <!-- Попап благодарности -->
+    <div class="popup popup--thanks">
+      <div class="popup__content">
+        <button class="popup__close-btn button" type="button"></button>
+        <h2 class="popup__title title">Спасибо!</h2>
+        <p class="popup__text subtitle">
+          Ваш запрос отправлен. Мы скоро свяжемся с вами!
+        </p>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
     <script src="js/remove-the-hanging-preposition.js"></script>
     <script src="js/choice-components-list.js"></script>
     <script src="js/swipe-carousel.js"></script>
     <script src="js/modal-products.js"></script>
     <script src="js/up-button.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script src="js/popup.js"></script>
   </body>
 </html>

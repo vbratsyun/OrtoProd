@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isPrivacyChecked) {
       privacyCheckbox.classList.add("error");
       warningText.classList.add("popup__privacy-text--error");
-      warningText.textContent = "Вы должны согласиться с Политикой конфиденциальности";
+      warningText.textContent =
+        "Вы должны согласиться с Политикой конфиденциальности";
     } else {
       privacyCheckbox.classList.remove("error");
       warningText.classList.remove("popup__privacy-text--error");
