@@ -1,5 +1,29 @@
 .article__title {
   margin-bottom: 20px;
+
+  &--politics-main {
+    font-size: 21px;
+  }
+
+  &--politics {
+    margin: 0 0 10px;
+    color: $title-text;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--politics-main {
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--politics-main {
+      font-size: 46px;
+      text-transform: none;
+      margin: 0 0 20px;
+    }
+  }
 }
 
 .article__text {
@@ -13,6 +37,10 @@
 
 .article__list {
   margin: 0;
+
+  &--politics {
+    list-style-type: disc;
+  }
 
   @media (min-width: $tablet-width) {
     text-align: justify;
