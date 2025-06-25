@@ -15,11 +15,24 @@
 }
 
 .requisites-list__title {
-  font-weight: 600;
+  font-weight: 700;
   color: $green;
 
+  @media (min-width: $tablet-width) {
+    font-size: 12.5px;
+  }
+
   @media (min-width: $desktop-width) {
+    font-size: 14px;
     display: block;
+  }
+}
+
+.requisites-list__value {
+  font-size: 13.5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
   }
 }
 
@@ -64,9 +77,15 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    &--requisites {
-      max-width: fit-content;
-    }
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+
+
+    // &--requisites {
+    //   max-width: fit-content;
+    // }
   }
 }
