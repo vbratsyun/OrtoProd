@@ -133,17 +133,12 @@
 }
 
 .page-footer__copyright,
-.page-footer__link {
+.page-footer__link-politics {
   position: relative;
   text-align: center;
   margin: 0;
   font-size: 12px;
   line-height: normal;
-
-  &--politics {
-    text-transform: uppercase;
-    color: $green;
-  }
 
   @media (min-width: $tablet-width) {
     margin-right: auto;
@@ -153,6 +148,25 @@
     text-align: right;
     margin-left: auto;
     margin-right: 0;
+  }
+}
+
+.page-footer__link-politics {
+  text-transform: uppercase;
+  color: $green;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+
+  &--current:hover,
+  &--current:active {
+    color: $green;
+    cursor: auto;
   }
 }
 
@@ -189,14 +203,6 @@
 
 .page-footer__social-link:active .page-footer__social-icon {
   fill: $active;
-}
-
-.page-footer__link--politics:hover {
-  color: $hover;
-}
-
-.page-footer__link--politics:active {
-  color: $active;
 }
 
 .page-footer__development-link:hover {
