@@ -6,6 +6,7 @@
 
 .preface__container {
   position: relative;
+  margin-bottom: 40px;
 
   &::before {
     content: "";
@@ -28,6 +29,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+
     &::before {
       width: 100%;
       height: 450px;
@@ -110,4 +113,8 @@
   @media (min-width: $desktop-width) {
     text-transform: uppercase;
   }
+}
+
+.preface__roadmap {
+  margin-bottom: 85px;
 }

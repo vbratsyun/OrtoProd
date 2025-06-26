@@ -1,0 +1,230 @@
+.roadmap {
+  display: grid;
+  flex-direction: column;
+  height: 100%;
+}
+
+.roadmap__item {
+  display: grid;
+  grid-template-columns: 2px 1fr;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 40px;
+  }
+}
+
+.roadmap__box {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+
+    &--odd {
+      order: 1;
+    }
+
+    &--even {
+      order: 3;
+    }
+  }
+}
+
+.roadmap__line {
+  position: relative;
+  width: 2px;
+  height: 100%;
+  background-color: $grey-line;
+
+  &::before,
+  &--last-item::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $green;
+    padding: 2px;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &--last-item::after {
+    bottom: -33px;
+    background: url("../img/icons/roadmap/icon-finish.svg") center no-repeat,
+      rgb(172, 156, 68);
+  }
+
+  &--step1::before {
+    background-image: url("../img/icons/roadmap/icon-doctor.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--step2::before {
+    background-image: url("../img/icons/roadmap/icon-commission.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--step3::before {
+    background-image: url("../img/icons/roadmap/icon-document.svg");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--step1-TSR::before {
+    background-image: url("../img/icons/roadmap/icon-document-TSR.svg");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--step2-TSR::before {
+    background-image: url("../img/icons/roadmap/icon-organization.svg");
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--step3-TSR::before {
+    background-image: url("../img/icons/roadmap/icon-product.svg");
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.roadmap__step {
+  padding: 40px 0 20px;
+
+  @media (min-width: $tablet-width) {
+    &--odd {
+      order: 3;
+    }
+
+    &--even {
+      order: 1;
+    }
+  }
+}
+
+.roadmap__title {
+  margin-bottom: 20px;
+}
+
+.roadmap__text {
+  color: $grey-text;
+  margin: 0;
+  font-size: 12px;
+
+  &--description-of-the-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &--value {
+    text-transform: uppercase;
+    color: $title-text;
+    font-size: 12px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+
+    &--description-of-the-title {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.roadmap__more-detailed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+
+  &--opened {
+    max-height: 1000px;
+    opacity: 1;
+  }
+}
+
+.roadmap__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmap__list {
+  color: $grey-text;
+}
+
+.roadmap__button {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $green;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+
+  &--active .roadmap__button-arrow {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.roadmap__button-arrow {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+
+  @media (min-width: $tablet-width) {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+  }
+}
+
+.roadmap__button:hover .roadmap__button-value {
+  color: $hover;
+}
+
+.roadmap__button:hover .roadmap__button-arrow {
+  fill: $hover;
+}
+
+.roadmap__button:active .roadmap__button-value {
+  color: $active;
+}
+
+.roadmap__button:active .roadmap__button-arrow {
+  fill: $active;
+}
