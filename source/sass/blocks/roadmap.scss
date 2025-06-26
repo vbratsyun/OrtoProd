@@ -218,6 +218,11 @@
   }
 }
 
+.roadmap__link {
+  color: $green;
+  cursor: pointer;
+}
+
 .roadmap__button:hover .roadmap__button-value {
   color: $hover;
 }
