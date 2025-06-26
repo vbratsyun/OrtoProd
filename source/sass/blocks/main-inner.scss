@@ -55,8 +55,9 @@
 }
 
 .main-inner__preface,
-.main-inner__certificate-application {
-  margin-bottom: 65px;
+.main-inner__certificate-application,
+.main-inner__receive-IPRA {
+  margin: 0 auto 65px;
 
   @media (min-width: $desktop-width) {
     margin: 0 auto 85px;
