@@ -16,11 +16,13 @@
   @media (min-width: $tablet-width) {
     font-size: 22px;
     line-height: 36px;
+    text-align: justify;
     margin: 0 0 50px;
-    width: 91%;
   }
 
   @media (min-width: $desktop-width) {
     width: 1030px;
+    font-size: 30px;
+    line-height: normal;
   }
 }
