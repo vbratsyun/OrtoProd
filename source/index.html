@@ -2159,16 +2159,25 @@
               Ваш отзыв важен для нас!
             </p>
             <p class="feedback__text feedback__text--tablet">
-              Нам важно ваше мнение. <span class="br br--desktop"></span> Поделитесь своим опытом — это поможет
-              другим людям!
+              Нам важно ваше мнение.
+              <span class="br br--desktop"></span> Поделитесь своим опытом — это
+              поможет другим людям!
             </p>
-            <img
-              class="feedback__image"
-              src="../img/index/qr-code.png"
-              width="200"
-              height="200"
-              alt="QR код отзыва"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="img/index/qr-code.webp, img/index/qr-code@2x.webp 2x"
+              />
+              <img
+                class="feedback__image"
+                src="img/index/qr-code.png"
+                srcset="img/index/qr-code@2x.png 2x"
+                width="200"
+                height="200"
+                alt="QR код отзыва."
+              />
+            </picture>
+
             <a
               class="feedback__button button link"
               href="https://rdata.one/0eZh"
