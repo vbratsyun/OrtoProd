@@ -1,5 +1,7 @@
 .contacts {
-  padding-top: 45px;
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+  }
 }
 
 .contacts__location {
