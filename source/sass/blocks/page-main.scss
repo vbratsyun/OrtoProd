@@ -57,3 +57,11 @@
 .page-main__counter {
   margin-bottom: 0;
 }
+
+.page-main__feedback {
+  margin-bottom: 65px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 85px;
+  }
+}
