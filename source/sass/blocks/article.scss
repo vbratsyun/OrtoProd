@@ -26,6 +26,17 @@
   }
 }
 
+h3.article__title {
+  margin: 40px 0 10px;
+  text-transform: uppercase;
+}
+
+h4.article__title,
+h5.article__title {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
 .article__text {
   margin: 0 auto 20px;
 
@@ -46,6 +57,14 @@
     text-align: justify;
     font-size: 16px;
   }
+}
+
+.article__list-term {
+  font-weight: 700;
+}
+
+.article__list-description {
+  margin-left: 30px;
 }
 
 .article__list-item {
