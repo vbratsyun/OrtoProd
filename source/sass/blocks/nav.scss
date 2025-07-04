@@ -1,11 +1,13 @@
 // Для квадратной картинки
 .nav {
   position: relative;
+  z-index: 2;
 }
 
 // Для широкоформатной картинки
 // .nav {
 //   position: relative;
+//   z-index: 2;
 //   background-color: $grey-background;
 // }
 
