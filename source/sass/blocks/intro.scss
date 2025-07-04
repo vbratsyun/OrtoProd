@@ -2,19 +2,22 @@
 .intro {
   position: relative;
   text-align: right;
+  min-height: 560px;
   padding: 35px 0 30px;
   background-color: $grey-background;
+  z-index: 1;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 104px;
+    bottom: 113px;
     left: 0;
     width: 100%;
     height: 338px;
     background: url("../img/index/intro-background-mobile.png") no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: -1;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/index/intro-background-mobile@2x.png") no-repeat;
@@ -43,6 +46,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 60px 0 40px;
+    min-height: 496px;
 
     &::after {
       content: none;
@@ -50,14 +54,24 @@
   }
 }
 
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 555px;
+
+  @media (min-width: $desktop-width) {
+    min-height: 496px;
+  }
+}
+
 .intro__slogan {
-  max-width: 280px;
+  max-width: 292px;
   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
   font-size: 25px;
   color: #242b0a;
   font-weight: 700;
   line-height: 38px;
-  margin: 0 0 20px auto;
+  margin: 0 0 auto auto;
   text-shadow: 1px 1px 20px $white;
 
   @media (min-width: 431px) {
@@ -68,7 +82,7 @@
     max-width: 580px;
     font-size: 52px;
     line-height: 60px;
-    margin: 0 0 40px auto;
+    margin: 0 0 60px auto;
   }
 
   @media (min-width: 821px) {
@@ -80,7 +94,7 @@
     max-width: 641px;
     font-size: 57px;
     line-height: 70px;
-    margin: 0 0 45px auto;
+    margin: 0 0 auto auto;
 
     &::after {
       content: "";
@@ -103,32 +117,10 @@
   }
 }
 
-.intro__text {
-  width: 100%;
-  max-width: 400px;
-  font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
-  font-size: 13.5px;
-  color: $black;
-  text-transform: uppercase;
-  margin: 0 0 394px auto;
-
-  @media (min-width: $tablet-width) {
-    max-width: 447px;
-    font-size: 18px;
-    line-height: 36px;
-    margin: 0 0 55px auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 560px;
-    font-size: 22px;
-    margin: 0 0 76px auto;
-  }
-}
-
 .intro__link {
   display: block;
   max-width: 292px;
+  width: 100%;
   font-family: "Arial", "Calibri", "Helvetica", sans-serif;
   text-align: center;
   color: $white;
@@ -161,6 +153,7 @@
 
 // Для широкоформатной картинки
 // .intro {
+//   min-height: 467px;
 //   text-align: right;
 //   padding: 46px 0 30px;
 //   background: url(../img/index/intro-background2-tablet.jpg) no-repeat;
@@ -176,6 +169,7 @@
 
 //   @media (min-width: $tablet-width) {
 //     padding: 66px 0 40px;
+//     min-height: 667px;
 //   }
 
 //   @media (min-width: $desktop-width) {
@@ -192,19 +186,29 @@
 //     }
 //   }
 
-//   @media (min-width:1660px) {
+//   @media (min-width: 1660px) {
 //     background-position-y: 40%;
 //   }
 // }
 
+// .intro__wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 467px;
+
+//   @media (min-width: $tablet-width) {
+//     min-height: 667px;
+//   }
+// }
+
 // .intro__slogan {
-//   max-width: 280px;
+//   max-width: 292px;
 //   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
 //   font-size: 25px;
 //   color: #242b0a;
 //   font-weight: 700;
 //   line-height: 38px;
-//   margin: 0 0 20px auto;
+//   margin: 0 0 auto auto;
 //   text-shadow: 1px 1px 20px $white;
 
 //   @media (min-width: 431px) {
@@ -215,7 +219,6 @@
 //     max-width: 580px;
 //     font-size: 52px;
 //     line-height: 60px;
-//     margin: 0 0 100px auto;
 //   }
 
 //   @media (min-width: 821px) {
@@ -225,34 +228,13 @@
 //   @media (min-width: $desktop-width) {
 //     font-size: 60px;
 //     line-height: 80px;
-//     margin: 0 0 135px auto;
-//   }
-// }
-
-// .intro__text {
-//   max-width: 211px;
-//   font-family: "Oswald", "Calibri", "Helvetica", sans-serif;
-//   font-size: 13.5px;
-//   color: $black;
-//   text-transform: uppercase;
-//   margin: 0 0 219px auto;
-
-//   @media (min-width: $tablet-width) {
-//     max-width: 426px;
-//     font-size: 18px;
-//     line-height: 36px;
-//     margin: 0 0 255px auto;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     max-width: 521px;
-//     font-size: 22px;
 //   }
 // }
 
 // .intro__link {
 //   display: block;
 //   max-width: 292px;
+//   width: 100%;
 //   font-family: "Arial", "Calibri", "Helvetica", sans-serif;
 //   text-align: center;
 //   color: $white;
@@ -275,6 +257,7 @@
 //   @media (min-width: $tablet-width) {
 //     padding: 18px 26px;
 //     font-size: 19.5px;
+//     margin: 0 0 0 auto;
 //   }
 
 //   @media (min-width: $desktop-width) {
